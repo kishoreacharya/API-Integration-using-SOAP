@@ -1,0 +1,28 @@
+<?php
+include_once 'includes.php';
+
+//Initiate DB Client
+$DB_USER = "";
+$DB_PASSWORD = "";
+$DB_DBNAME = "";
+$DB_BRAND = "mysql";
+$DB_HOSTNAME = "l";
+
+$dbClient = new Database($DB_USER,$DB_PASSWORD,$DB_DBNAME,$DB_HOSTNAME);
+
+//Initiate XML PARSER Client
+$parserClient = new xml2Array();
+
+//Code to generate token
+$objExperian = new Experian($soapClientUAT,$parserClient,$dbClient,$dbClient);
+$objExperian->configExperianParams('UAT');
+
+$arrToken = $objExperian->generateToken();
+print_r($arrToken);
+$objExperian->getStoredToken('DB');
+exit;
+//Code to perform Id Check
+$arrIdCheckResult = $objExperian->checkIdentityTest(array('external_verifier_detail_id'=>290));
+echo '<pre>';
+print_r($arrIdCheckResult);
+?>

@@ -1,0 +1,28 @@
+<env:Envelope xmlns:avs="http://schema.uk.experian.com/eih/core/response/tnex" xmlns:bw="http://schema.uk.experian.com/eih/core/bwex" xmlns:bws="http://schema.uk.experian.com/eih/2011/03/BankWizard" xmlns:eih="http://schema.uk.experian.com/eih/2011/03" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:header="http://schema.uk.experian.com/eih/2011/03/EIHHeader" xmlns:ns3="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qas="http://schema.uk.experian.com/eih/2011/03/QAS">
+  <env:Header />
+  <env:Body>
+    <eih:ProcessConfigResponse>
+      <header:EIHHeader>
+        <header:ClientUser>ADL</header:ClientUser>
+        <header:ReferenceId>ADL1EXT329</header:ReferenceId>
+      </header:EIHHeader>
+      <eih:DecisionHeader>
+        <eih:UniqueReferenceNo>122437476031</eih:UniqueReferenceNo>
+        <eih:AuthenticationDecision>Not Authenticated</eih:AuthenticationDecision>
+        <eih:AuthenticationText>The applicant has not been authenticated to your required minimum level based on the rules implemented in the selected query. You should seek other proofs of identity before dealing with this applicant.</eih:AuthenticationText>
+      </eih:DecisionHeader>
+      <eih:ProcessConfigResultsBlock>
+        <eih:EIAResultBlock>
+          <eih:AuthenticationIndex />
+          <eih:EIAResults>
+            <eih:ReturnedHRPCount>1</eih:ReturnedHRPCount>
+            <eih:ReturnedHRP>
+              <eih:HighRiskPolRuleID>U000</eih:HighRiskPolRuleID>
+              <eih:HighRiskPolRuleText>No trace of supplied Address(es), or manual Authentication required by the Applicant</eih:HighRiskPolRuleText>
+            </eih:ReturnedHRP>
+          </eih:EIAResults>
+        </eih:EIAResultBlock>
+      </eih:ProcessConfigResultsBlock>
+    </eih:ProcessConfigResponse>
+  </env:Body>
+</env:Envelope>
