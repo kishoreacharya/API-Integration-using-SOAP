@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<soap:Body>
+<STS xmlns="http://www.uk.experian.com/WASP/">
+<authenticationBlock>
+&lt;WASPAuthenticationRequest&gt;
+&lt;ApplicationName&gt;ADL&lt;/ApplicationName&gt;
+&lt;AuthenticationLevel&gt;CertificateAuthentication&lt;/AuthenticationLevel&gt;
+&lt;AuthenticationParameters /&gt;
+&lt;/WASPAuthenticationRequest&gt;
+</authenticationBlock>
+</STS>
+</soap:Body>
+</soap:Envelope>
+
